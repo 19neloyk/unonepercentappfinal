@@ -1,0 +1,144 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+  // Bootstrap CSS
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+  // Bootstrap JavaScript
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+  style.
+    div.jumbotron{
+    color: black;
+    background-color:#707FEC;
+    font-size: 20px;
+    font-weight:bold;
+    }
+    span{
+    color: white;
+    }
+    span:hover{
+    color: gray;
+    font-weight:bold;
+    }
+    .container-fluid{
+    background-color:white;
+    }
+    .navbar{
+    background-color:black;
+    }
+    li a{
+    color:#707FEC;
+    }
+    li a:hover{
+    color:black;
+    background-color:black;
+    font:Arial,;
+    font-weight:bold;
+    }
+
+title APPLICATION FORM
+.container-fluid
+  .jumbotron.text-center
+    | UNITED NATIONS STAFF 1% FOR DEVELOPMENT FUND
+  nav.navbar.default
+    .navbar-header
+      // Button for user to collapse or uncollapse the navbar
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navLinks')
+        span Menu
+    ul#navLinks.nav.navbar-nav.text-center
+      li
+        a(href='#') About
+      li
+        a(href='#') Home
+      li
+        a(href='#') Become a Member
+      li
+        a(href='#') Projects
+      li
+        a(href='#') How to Apply
+      li
+        a(href='#') Application Form
+      li
+        a(href='#') FAQ
+      li
+        a(href='#') Contact
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg
+  div
+    h1 APPLICATION FORM
+  div   
+  form(action='/formes', method='post')
+    .form-group
+      label(for='email') Su e-mail de contacto:
+      input#exampleFormControlInput1.form-control(type='text', name='email', placeholder='nombre@ejemplo.com' value=(undefined===application ? '' : application.email))
+    .form-group
+      label(for='question') Pregunta 1: ¿Cúal es el título de su proyecto?
+      input#input-element.form-control(rows='3', type='text', name='title' value=(undefined===application ? '' : application.title))
+    .form-group
+      label(for='question') Pregunta 2: ¿En qué país se desarrolla el proyecto?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='country' value=(undefined===application ? '' : application.country))
+    .form-group
+      label(for='question')
+        | Pregunta 3: ¿Dónde, precisamente, en el país se ubica el proyecto?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='region' value=(undefined===application ? '' : application.region))
+    .form-group
+      label(for='question') Pregunta 4: ¿Cuál es el costo del proyecto?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='cost' value=(undefined===application ? '' : application.costInDollars))
+    .form-group
+      label(for='question') Pregunta 5: ¿Cuál es el monto solicitado al Fondo 1%?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='specificrequest' value=(undefined===application ? '' : application.specificRequest))
+    .form-group
+      label(for='question')
+        | Pregunta 6: ¿Cuál es el presupuesto total del proyecto? ¿Cómo van a utilizar y repartir este presupuesto?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='fundingallocation' value=(undefined===application ? '' : application.fundingAllocation))
+    .form-group
+      label(for='question')
+        | Pregunta 7: ¿Quién va a realizar el proyecto? ¿Se contratará a trabajadores/as o expertos/as asalariados/as?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='seven' value=(undefined===application ? '' : application.questionSeven))
+    .form-group
+      label(for='question')
+        | Pregunta 8: ¿Quién prepara y manda esta solicitud de financiación? ¿Quiénes serán las personas beneficiarias? (indique aproximadamente el número de personas que beneficiarán del proyecto)?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='eight' value=(undefined===application ? '' : application.questionEight))
+    .form-group
+      label(for='question') Pregunta 9: ¿Quién inició este proyecto?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='nine' value=(undefined===application ? '' : application.questionNine))
+    .form-group
+      label(for='question')
+        | Pregunta 10: ¿Cuál es la situación presente que el proyecto busca mejorar? ¿Por qué este proyecto es necesario?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='ten' value=(undefined===application ? '' : application.questionTen))
+    .form-group
+      label(for='question')
+        | Pregunta 11: ¿Cúal es la meta de este proyecto? ¿Qué aspira a realizar y a mejorar?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='eleven' value=(undefined===application ? '' : application.questionEleven))
+    .form-group
+      label(for='question') Question 12: ¿Quiénes son las personas que van a beneficiar de este proyecto?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='twelve' value=(undefined===application ? '' : application.questionTwelve))
+    .form-group
+      label(for='question') Pregunta 13: Aproximadamente, ¿cuántas personas se beneficiarán de este proyecto?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='thirteen' value=(undefined===application ? '' : application.questionThirteen))
+    .form-group
+      label(for='question')
+        | Pregunta 14:¿Qué recursos provendrán de la comunidad local y de las personas beneficiarias?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='fourteen' value=(undefined===application ? '' : application.questionFourteen))
+    .form-group
+      label(for='question')
+        | Question 15: Pregunta 15: ¿Quién es responsable de este proyecto? ¿Quién será la persona responsable de la comunicación con el Fondo 1% (nombre, apellido/s, dirección postal y número de teléfono)?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='fifteen' value=(undefined===application ? '' : application.questionFifteen))
+    .form-group
+      label(for='question') Pregunta 16: ¿Cómo se medirá el cumplimiento y los resultados del proyecto?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='sixteen' value=(undefined===application ? '' : application.questionSixteen))
+    .form-group
+      label(for='question')
+        | Pregunta 17: ¿Cuál es la información bancaria para la transferencia  de la financiación (nombre del banco, número de cuenta bancaria, titular de la cuenta, dirección postal del banco)?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='seventeen' value=(undefined===application ? '' : application.questionSeventeen))
+    .form-group
+      label(for='question') Pregunta 18: ¿Consta en el registro del gobierno local su organización, estructura o asociación?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='eighteen' value=(undefined===application ? '' : application.questionEighteen))
+    .form-group
+      label(for='question') ¿Algún otro comentario?
+      input#exampleFormControlTextarea1.form-control(rows='3', type='text', name='comment' value=(undefined===application ? '' : application.comment))
+    button.btn.btn-primary(type='submit') Enviar La Solicitud

@@ -1,0 +1,83 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible', content='IE=edge')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js')
+  // Bootstrap CSS
+  link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+  // Bootstrap JavaScript
+  script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+  style.
+    div.jumbotron{
+    color: black;
+    background-color:#707FEC;
+    font-size: 20px;
+    font-weight:bold;
+    }
+    span{
+    color: white;
+    }
+    span:hover{
+    color: gray;
+    font-weight:bold;
+    }
+    .container-fluid{
+    background-color:white;
+    }
+    .navbar{
+    background-color:black;
+    }
+    li a{
+    color:#707FEC;
+    }
+    li a:hover{
+    color:black;
+    background-color:black;
+    font:Arial,;
+    font-weight:bold;
+    }
+title APPLICATION FORM
+.container-fluid
+  .jumbotron.text-center
+    | UNITED NATIONS STAFF 1% FOR DEVELOPMENT FUND
+  nav.navbar.default
+    .navbar-header
+      // Button for user to collapse or uncollapse the navbar
+      button.navbar-toggle(type='button', data-toggle='collapse', data-target='#navLinks')
+        span Menu
+    ul#navLinks.nav.navbar-nav.text-center
+      li
+        a(href='#') About
+      li
+        a(href='#') Home
+      li
+        a(href='#') Become a Member
+      li
+        a(href='#') Projects
+      li
+        a(href='#') How to Apply
+      li
+        a.q(href='#') Application Form
+      li
+        a(href='#') FAQ
+      li
+        a(href='#') Contact
+  div
+    h1 English: Choose Language for the Application Form
+  div
+    h1 Espa&ntilde;ol: Elija el Idioma para el Formulario de Solicitud
+  div
+    h1 Fran&ccedil;ais: Choisissez la Langue du Formulaire de Demande
+  div
+    .btn-group(role='group')
+      a.dropdown-toggle.btn.btn-primary(type='button', data-toggle='dropdown')
+        | Language/Idioma/Langue
+        span.caret
+      ul.dropdown-menu
+        li
+          a.matching(href='/formen') English
+        li
+          a.matching(href='/formes') Espa&ntilde;ol
+        li
+          a.matching(href='/formfr') Fran&ccedil;ais

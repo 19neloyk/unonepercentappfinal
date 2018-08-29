@@ -1,0 +1,73 @@
+head
+| i
+meta(name='viewport', content='width=device-width, initial-scale=1')
+link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js')
+script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+title
+style.
+  .application{
+  height:50px;
+  background: #707FEC;
+  color: white;
+  font-size: 20px;
+  outline: ;
+  margin: 5px;
+  width: 100%;
+  }
+  .application:hover{
+  background: yellow;
+  }
+  .information{
+  background-color: #d4e3fc;
+  }
+  .title{
+  font-size: 30px;
+  color: blue;
+  }
+  .country{
+  font-size: 30px;
+  color: green;
+  }
+  .description{
+  font-size: 20px;
+  color: black;
+  }
+#whole.container
+  each application in application_list
+     button.application.btn  Score: #{application.score}
+     .information
+        h2.title Title: #{application.title}
+        h2.country Country: #{application.country}
+        h2.description #{application.email}
+        h2.description #{application.place}
+        h2.description #{application.costInDollars}
+        h2.description #{application.specificRequest}
+        h2.description #{application.fundingAllocation}
+        h2.description #{application.questionSeven}
+        h2.description #{application.questionEight}
+        h2.description #{application.questionNine}
+        h2.description #{application.questionTen}
+        h2.description #{application.questionEleven}
+        h2.description #{application.questionTwelve}
+        h2.description #{application.questionThirteen}
+        h2.description #{application.questionFourteen}
+        h2.description #{application.questionFifteen}
+        h2.description #{application.questionSixteen}
+        h2.description #{application.questionSeventeen}
+        h2.description #{application.questionEighteen}
+        h2.description #{application.comment}
+script.
+  var coll = document.getElementsByClassName("application");
+  var i;
+  for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var content = this.nextElementSibling;
+  if (content.style.display === "block") {
+  content.style.display = "none";
+  } else {
+  content.style.display = "block";
+  }
+  });
+  }

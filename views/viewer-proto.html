@@ -1,0 +1,143 @@
+<html>
+  <head></head>
+  <body>i
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title></title>
+    <style>
+      .application{
+      height:50px;
+      background: #707FEC;
+      color: white;
+      font-size: 20px;
+      outline: ;
+      margin: 5px;
+      width: 100%;
+      }
+      .application:hover{
+      background: yellow;
+      }
+      .information{
+      background-color: #d4e3fc;
+      }
+      .title{
+      font-size: 30px;
+      color: blue;
+      }
+      .country{
+      font-size: 30px;
+      color: green;
+      }
+      .description{
+      font-size: 20px;
+      color: black;
+      }
+    </style>
+    <div class="container" id="whole"></div>
+    <script>
+      for (x = 0; x < 5; x++){ //use schema filter
+      // var scoreSource = application.score  Use dot notation to access score of Schema
+      var scoreSource = 100;
+      var btn = document.createElement("BUTTON");
+      btn.classList.add("application")
+      btn.classList.add("btn")
+      btn.innerHTML = 'Score: ' +  scoreSource
+      var information = document.createElement("div")
+      information.classList.add("information")
+      //These are the different sections of the application
+      //var titleSource = application.title;
+      var titleSource = "This is a title"
+      var title = document.createElement("h2");
+      title.classList.add("title")  //use dot notation to access title of Schema
+      var titleNode = document.createTextNode(titleSource);
+      title.appendChild(titleNode);
+      information.appendChild(title)
+      // var locationSource = application.place  Use dot notation to access country(or location, later on) of Schema
+      var countrySource = "This is the country"
+      var country = document.createElement("h2");
+      country.classList.add("country")
+      var countryNode = document.createTextNode(countrySource);
+      country.appendChild(countryNode);
+      information.appendChild(country)
+      //Idea : Make an array of the class attributes, run a loop through them, then make a function that makes a new description paragraph--> WORKS!
+      for (z = 0; z < 16; z++){
+      var descriptionSource = "this is a description";
+      /*
+      switch (z){
+      case 0:
+      descriptionSource =  application.costInDollars;
+      break;
+      case 1:
+      descriptionSource =  application.specificRequest;
+      break;
+      case 2:
+      descriptionSource =  application.fundingAllocation;
+      break;
+      case 3:
+      descriptionSource =  application.questionSeven;
+      break;
+      case 4:
+      descriptionSource =  application.questionEight;
+      break;
+      case 5:
+      descriptionSource =  application.questionNine;
+      break;
+      case 6:
+      descriptionSource =  application.questionTen;
+      break;
+      case 7:
+      descriptionSource =  application.questionEleven;
+      break;
+      case 8:
+      descriptionSource =  application.questionTwelve;
+      break;
+      case 9:
+      descriptionSource =  application.questionThirteen;
+      break;
+      case 10:
+      descriptionSource =  application.questionFourteen;
+      break;
+      case 11:
+      descriptionSource =  application.questionFifteen;
+      break;
+      case 12:
+      descriptionSource =  application.questionSixteen;
+      break;
+      case 13:
+      descriptionSource =  application.questionSeventeen;
+      break;
+      case 14:
+      descriptionSource =  application.questionEighteen;
+      break;
+      case 15:
+      descriptionSource =  application.email;
+      break;
+      }
+      */
+      var description = document.createElement("h2");
+      description.classList.add("description")
+      var descriptionNode = document.createTextNode(descriptionSource);
+      description.appendChild(descriptionNode);
+      information.appendChild(description)
+      document.getElementById("whole").appendChild(btn);
+      document.getElementById("whole").appendChild(information);
+      }
+      }
+      var coll = document.getElementsByClassName("application");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+      content.style.display = "none";
+      } else {
+      content.style.display = "block";
+      }
+      });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!-- Bootstrap JavaScript-->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <style>
+    div.jumbotron{
+    color: black;
+    background-color:#707FEC;
+    font-size: 20px;
+    font-weight:bold;
+    }
+    span{
+    color: white;
+    }
+    span:hover{
+    color: gray;
+    font-weight:bold;
+    }
+    .container-fluid{
+    background-color:white;
+    }
+    .navbar{
+    background-color:black;
+    }
+    li a{
+    color:#707FEC;
+    }
+    li a:hover{
+    color:black;
+    background-color:black;
+    font:Arial,;
+    font-weight:bold;
+    }
+  </style>
+</head>
+<title>APPLICATION FORM</title>
+<div class="container-fluid">
+  <div class="jumbotron text-center">UNITED NATIONS STAFF 1% FOR DEVELOPMENT FUND</div>
+  <nav class="navbar default">
+    <div class="navbar-header">
+      <!-- Button for user to collapse or uncollapse the navbar-->
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navLinks"><span>Menu</span></button>
+    </div>
+    <ul class="nav navbar-nav text-center" id="navLinks">
+      <li><a href="#">About</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Become a Member</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">How to Apply</a></li>
+      <li><a href="#">Application Form</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div>
+    <h1>APPLICATION FORM</h1>
+  </div>
+  <div>  </div>
+  <form action="/formen" method="post">
+    <div class="form-group">
+      <label for="emailaddress">Email Address</label>
+      <input class="form-control" id="exampleFormControlInput1" type="text" name="email" placeholder="name@example.com" value="">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 1: The title of your project</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="title" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 2: What country is this project in?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="country" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 3: What is the exact location of the project within the country (village, neighbourhood, district, province)?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="region" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 4: What is the cost of this project(in US dollars)? </label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="cost" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 5: What is being requested from the 1% Fund? From other sources? </label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="specificrequest" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 6:  What is the total budget? How will that budget be used and allocated?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="fundingallocation" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 7: Who is going to carry out the project? Will there be hired labourers or salaried experts?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="seven" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 8: Who is preparing and submitting this request? Who will benefit from the project (also approximately how many people)?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="eight" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 9: On whose initiative is the project being started?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="nine" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 10: What is the present situation that the project seeks to improve? Why is the project necessary?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="ten" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 11:  What is the aim of the project? What does the project hope to achieve?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="eleven" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 12: Who are the people that will benefit from the project?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="twelve" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 13: How many people (approximately) will benefit from the project?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="thirteen" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 14: What resources will come from the local community and beneficiaries?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="fourteen" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 15: Who is responsible for the project? With whom will the 1% Fund maintain contact (name, address)?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="fifteen" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 16: How will the results or achievements of the project be measured?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="sixteen" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 17: What is the banking information required for payment (bank account number, account holder, bank name, bank address)?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="seventeen" value=""></textarea>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Question 18: The Organization&rsquo;s registration with local government?</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" type="text" name="eighteen" value=""></textarea>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit Application</button>
+  </form>
+</div>

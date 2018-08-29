@@ -1,0 +1,77 @@
+<html>
+  <head></head>
+  <body>i
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title></title>
+    <style>
+      .application{
+      height:50px;
+      background: #707FEC;
+      color: white;
+      font-size: 20px;
+      outline: ;
+      margin: 5px;
+      width: 100%;
+      }
+      .application:hover{
+      background: yellow;
+      }
+      .information{
+      background-color: #d4e3fc;
+      }
+      .title{
+      font-size: 30px;
+      color: blue;
+      }
+      .country{
+      font-size: 30px;
+      color: green;
+      }
+      .description{
+      font-size: 20px;
+      color: black;
+      }
+    </style>
+    <div class="container" id="whole">
+		<button class = "application btn"> Score: </button>
+		<div class = "information">
+			<h2 class = "title">Title: </h2>
+			<h2 class = "country">Country: </h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+			<h2 class ="description"></h2>
+		</div>
+	</div>
+    <script>
+      var coll = document.getElementsByClassName("application");
+      var i;
+      for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+      content.style.display = "none";
+      } else {
+      content.style.display = "block";
+      }
+      });
+      }
+    </script>
+  </body>
+</html>
