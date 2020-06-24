@@ -1,5 +1,5 @@
 # unonepercentappfinal
-Funding Application Scoring App for UN One Percent for Development Fund
+Full-stack application I developed for the United Nations One Percent Fund with a non-AI algorithm for sentiment analysis.
 
 ###### The UN One Percent for Development for Staff Fund receives applications from all over the world asking for the sponsoring of self-sustaining community projects in typically poor communities. 
 
